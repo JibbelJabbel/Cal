@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <title>Calculator PWA</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+            // If opened from shortcut, show calculator
+            window.onload = function() {
+                document.getElementById('browser-message').style.display = 'none';
+                document.getElementById('calculator').style.display = 'block';
+            };
+        } else {
+            // If opened in browser, show add to home screen message
+            window.onload = function() {
+                document.getElementById('browser-message').style.display = 'block';
+                document.getElementById('calculator').style.display = 'none';
+            };
+        }
+    </script>
+</head>
+<body>
+    <!-- Message for browser users -->
+    <div id="browser-message" style="display: none;">
+        <h1>Please add to homescreen shortcut</h1>
+    </div>
+
+    <!-- Calculator visible only after being added to homescreen -->
+    <div id="calculator" style="display: none;">
+        <h1>Calculator</h1>
+        <input type="number" id="val1" placeholder="Value 1"><br>
+        <input type="number" id="val2" placeholder="Value 2"><br>
+        <input type="number" id="val3" placeholder="Value 3"><br>
+        <input type="number" id="val4" placeholder="Value 4"><br>
+        <input type="number" id="val5" placeholder="Value 5"><br>
+        <button onclick="calculateSum()">CAL</button>
+        <p id="result"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
