@@ -7,19 +7,29 @@
     <title>Calculator PWA</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        if (window.matchMedia('(display-mode: standalone)').matches) {
-            // If opened from shortcut, show calculator
-            window.onload = function() {
+        function isPWA() {
+            // Check if the app is in standalone mode (iOS)
+            if (window.navigator.standalone === true) {
+                return true;
+            }
+            // Check if the app is in standalone mode (Android or others)
+            if (window.matchMedia('(display-mode: standalone)').matches) {
+                return true;
+            }
+            return false;
+        }
+
+        window.onload = function() {
+            if (isPWA()) {
+                // If opened from shortcut, show the calculator
                 document.getElementById('browser-message').style.display = 'none';
                 document.getElementById('calculator').style.display = 'block';
-            };
-        } else {
-            // If opened in browser, show add to home screen message
-            window.onload = function() {
+            } else {
+                // If opened in browser, show "Add to homescreen" message
                 document.getElementById('browser-message').style.display = 'block';
                 document.getElementById('calculator').style.display = 'none';
-            };
-        }
+            }
+        };
     </script>
 </head>
 <body>
