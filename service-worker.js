@@ -3,10 +3,10 @@ self.addEventListener('install', function(event) {
         caches.open('pwa-cache').then(function(cache) {
             return cache.addAll([
                 '/',
-                'Cal/index.html',
-                'Cal/style.css',
-                'Cal/app.js',
-                'Cal/manifest.json'
+                '/index.html',
+                '/style.css',
+                '/app.js',
+                '/manifest.json'
             ]);
         })
     );
