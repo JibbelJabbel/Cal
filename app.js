@@ -12,7 +12,7 @@ function calculateSum() {
 // Register the service worker
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-        navigator.serviceWorker.register('Cal/service-worker.js').then(function(registration) {
+        navigator.serviceWorker.register('service-worker.js').then(function(registration) {
             console.log('Service Worker registered with scope: ', registration.scope);
         }, function(err) {
             console.log('Service Worker registration failed: ', err);
