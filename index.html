@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="manifest.webmanifest">
-    <title>Calculator PWA</title>
+    <title>Apps homescreen</title>
     <link rel="stylesheet" href="style.css">
     <script>
         function isPWA() {
@@ -40,16 +40,9 @@
 
     <!-- Calculator visible only after being added to homescreen -->
     <div id="app" style="display: none;">
-        <h1>Calculator</h1>
-        <input type="number" id="val1" placeholder="Measured Temp High"><br>
-        <input type="number" id="val2" placeholder="Measured Temp Low"><br>
-        <input type="number" id="val3" placeholder="Display Temp High"><br>
-        <input type="number" id="val4" placeholder="Display Temp Low"><br>
-        <input type="number" id="val5" placeholder="A"><br>
-        <button onclick="calculateSum()">CAL</button>
-        <p id="result"></p>
+        <h1>Apps</h1>
+        <h2>Calculate new A value</h2>
+        <button onclick="window.location.href='CalApp.html';">Go to Calculator</button>
     </div>
-
-    <script src="app.js"></script>
 </body>
 </html>
