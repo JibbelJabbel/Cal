@@ -23,11 +23,11 @@
             if (isPWA()) {
                 // If opened from shortcut, show the calculator
                 document.getElementById('browser-message').style.display = 'none';
-                document.getElementById('calculator').style.display = 'block';
+                document.getElementById('app').style.display = 'block';
             } else {
                 // If opened in browser, show "Add to homescreen" message
                 document.getElementById('browser-message').style.display = 'block';
-                document.getElementById('calculator').style.display = 'none';
+                document.getElementById('app').style.display = 'none';
             }
         };
     </script>
@@ -39,13 +39,13 @@
     </div>
 
     <!-- Calculator visible only after being added to homescreen -->
-    <div id="calculator" style="display: none;">
+    <div id="app" style="display: none;">
         <h1>Calculator</h1>
-        <input type="number" id="val1" placeholder="Value 1"><br>
-        <input type="number" id="val2" placeholder="Value 2"><br>
-        <input type="number" id="val3" placeholder="Value 3"><br>
-        <input type="number" id="val4" placeholder="Value 4"><br>
-        <input type="number" id="val5" placeholder="Value 5"><br>
+        <input type="number" id="val1" placeholder="Measured Temp High"><br>
+        <input type="number" id="val2" placeholder="Measured Temp Low"><br>
+        <input type="number" id="val3" placeholder="Display Temp High"><br>
+        <input type="number" id="val4" placeholder="Display Temp Low"><br>
+        <input type="number" id="val5" placeholder="Z"><br>
         <button onclick="calculateSum()">CAL</button>
         <p id="result"></p>
     </div>
