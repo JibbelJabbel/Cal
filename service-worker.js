@@ -6,7 +6,7 @@ self.addEventListener('install', function(event) {
                 'CalApp.html',
                 'style.css',
                 'calapp.js',
-                'manifest.json'
+                'manifest.webmanifest'
             ]);
         })
     );
