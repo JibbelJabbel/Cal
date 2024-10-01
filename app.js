@@ -5,8 +5,8 @@ function calculateSum() {
     const val4 = parseFloat(document.getElementById('val4').value) || 0;
     const val5 = parseFloat(document.getElementById('val5').value) || 0;
 
-    const sum = val1 + val2 + val3 + val4 + val5;
-    document.getElementById('result').textContent = "Sum: " + sum;
+    const sum = ((val1 - val2)/(val3 - val4))*val5;
+    document.getElementById('result').textContent = "New A: " + sum;
 }
 
 // Register the service worker
