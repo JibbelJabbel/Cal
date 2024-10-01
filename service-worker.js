@@ -3,8 +3,9 @@ self.addEventListener('install', function(event) {
         caches.open('pwa-cache').then(function(cache) {
             return cache.addAll([
                 'index.html',
+                'CalApp.html',
                 'style.css',
-                'app.js',
+                'calapp.js',
                 'manifest.json'
             ]);
         })
