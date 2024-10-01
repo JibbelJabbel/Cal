@@ -9,6 +9,10 @@ function calculateSum() {
     document.getElementById('result').textContent = "New A: " + sum;
 }
 
+function goBack() {
+            window.history.back();
+}
+
 // Register the service worker
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
