@@ -1,6 +1,6 @@
 {
-  "name": "Calculator PWA",
-  "short_name": "Calculator",
+  "name": "PWA Apps",
+  "short_name": "Apps",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
