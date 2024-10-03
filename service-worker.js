@@ -4,8 +4,10 @@ self.addEventListener('install', function(event) {
             return cache.addAll([
                 'index.html',
                 'CalApp.html',
+                'Zcal.html',
                 'style.css',
                 'calapp.js',
+                'Zapp.js'
                 'manifest.webmanifest'
             ]);
         })
