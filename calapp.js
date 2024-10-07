@@ -6,6 +6,8 @@ function calculateSum() {
     const val5 = parseFloat(document.getElementById('val5').value) || 0;
 
     const sum = ((val1 - val2)/(val3 - val4))*val5;
+    // Round the sum to 3 decimal places
+    sum = Math.round(sum * 1000) / 1000;
     document.getElementById('result').textContent = "New A: " + sum;
 }
 
