@@ -4,6 +4,8 @@ function calculateSum() {
     const Z = parseFloat(document.getElementById('Z').value) || 0;
 
     const sum = Z + disp - meas;
+    // Round the sum to 3 decimal places
+    sum = Math.round(sum * 1000) / 1000;
     document.getElementById('result').textContent = "New Z: " + sum;
 }
 
