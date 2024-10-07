@@ -9,7 +9,19 @@
 <body>
     <div id="app">
         <h1>New Z Calculator</h1>
-        <div class="instructions">
+        
+        <input type="number" id="disp" placeholder="Display Temp"><br>
+        <input type="number" id="meas" placeholder="Measured Temp"><br>
+        <input type="number" id="Z" placeholder="Z"><br>
+        <button onclick="calculateSum()">CAL</button>
+        <p id="result"></p>
+
+        
+    </div>
+
+    <button class="box-button" onclick="goBack()">Back</button>
+
+    <div class="instructions">
             <h2>Zero adjustment</h2>
             <h3>Change calibration constant "Z" in order to bring the temerature measurement equal to the true value according to the control device.</h3>
             <ul>
@@ -20,16 +32,6 @@
                 <li>If the symbols are stil flashing, the new constant can be enterd immediately with the up and down button. Repeat procedure if not.</li>
             </ul>
         </div>
-        <input type="number" id="disp" placeholder="Display Temp"><br>
-        <input type="number" id="meas" placeholder="Measured Temp"><br>
-        <input type="number" id="Z" placeholder="Z"><br>
-        <button onclick="calculateSum()">CAL</button>
-        <p id="result"></p>
-    </div>
-
-    <button class="box-button" onclick="goBack()">Back</button>
-
-    
     <script src="Zapp.js"></script>
 </body>
 </html>
